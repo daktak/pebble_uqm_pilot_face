@@ -1,0 +1,199 @@
+{
+    "author": "david.barrett.0@gmail.com",
+    "dependencies": {},
+    "keywords": [],
+    "name": "uqm_pilot_face",
+    "pebble": {
+        "displayName": "UQM_Pilot_Face",
+        "enableMultiJS": true,
+        "messageKeys": [],
+        "projectType": "native",
+        "resources": {
+            "media": [
+                {
+                    "file": "images/trader-cap-000_144.png",
+                    "name": "TRADER_000_144",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/stinger-cap-000_144.png",
+                    "name": "STINGER_000_144",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/oldscout-cap-000_144.png",
+                    "name": "OLDSCOUT_000_144",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/dreadnought-cap-000_144.png",
+                    "name": "DREADNAUGHT_000_144",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/cruiser-cap-000_144.png",
+                    "name": "CRUISER_000_144",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/probe-cap-000_144.png",
+                    "name": "PROBE_000_144",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "fonts/FUTRFW.TTF",
+                    "name": "FONT_UQM_24",
+                    "targetPlatforms": null,
+                    "type": "font"
+                },
+                {
+                    "file": "images/avenger-cap-000_144.png",
+                    "name": "AVENGER_000_144",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/xform-cap-000.png",
+                    "name": "XFORM_000_144",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/eluder-cap-000_144.png",
+                    "name": "ELUDER_000_144",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/guardian-cap-000.png",
+                    "name": "GUARDIAN_000_144",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/skiff-cap-000_144.png",
+                    "name": "SKIFF_000_144",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/podship-cap-000_144.png",
+                    "name": "PODSHIP_CAP_144",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/blade-cap-000_144.png",
+                    "name": "BLADE_000_144",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/jugger-cap-000_144.png",
+                    "name": "JUGGER_000_144",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/avatar-cap-000_144.png",
+                    "name": "AVATAR_000_144",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/nemesis-cap-000_144.png",
+                    "name": "NEMESIS_000_144",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/penetrator-cap-000_144.png",
+                    "name": "PENETRATOR_000_144",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/fury-cap-000_144.png",
+                    "name": "FURY_000_144",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/torch-cap-000_144.png",
+                    "name": "TORCH_000_144",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/intruder-cap-000_144.png",
+                    "name": "INTRUDER_000_144",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/broodhome-cap-000_144.png",
+                    "name": "BROODHOME_000_144",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/flagship-cap-000_144.png",
+                    "name": "FLAGSHIP_000_144",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/mauler-cap-000_144.png",
+                    "name": "MAULER_000_144",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/marauder-cap-000_144.png",
+                    "name": "MARAUDER_000_144",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/samatra-cap-000.png",
+                    "name": "SAMATRA_000_144",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/drone-cap-000_144.png",
+                    "name": "DRONE_000_144",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/terminator-cap-000_144.png",
+                    "name": "TERMINIATOR_000_144",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                }
+            ]
+        },
+        "sdkVersion": "3",
+        "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk",
+            "diorite",
+            "emery",
+            "gabbro",
+            "flint"
+        ],
+        "uuid": "002af64a-fce9-4fed-ba9a-e2bbd66063e5",
+        "watchapp": {
+            "watchface": true
+        }
+    },
+    "version": "1.0.0"
+}
