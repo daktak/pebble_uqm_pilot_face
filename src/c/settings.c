@@ -39,8 +39,6 @@ void prv_inbox_received_handler(DictionaryIterator *iter, void *context) {
     bool old_hd2x = settings.hd_gfx;
     settings.hd_gfx = hd2x_t->value->uint32==1;
     if (old_hd2x != settings.hd_gfx) {
-      GRect bounds = get_bounds();
-      Layer *window_layer = get_window_layer();
       update_pilot();
     }
   }
