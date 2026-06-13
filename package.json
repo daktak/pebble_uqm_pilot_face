@@ -312,18 +312,6 @@
                     "type": "bitmap"
                 },
                 {
-                    "file": "images/turret_hires.png",
-                    "name": "NEMESIS_TURRET_HIRES",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/turret.png",
-                    "name": "NEMESIS_TURRET",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
                     "file": "images/xform_hires.png",
                     "name": "XFORM_HIRES",
                     "targetPlatforms": null,
