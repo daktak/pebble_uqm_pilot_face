@@ -23,7 +23,6 @@ static const uint32_t PILOT_RESOURCES_HIRES[] = {RESOURCE_ID_ELUDER_HIRES, RESOU
                           RESOURCE_ID_TORCH_HIRES, RESOURCE_ID_DRONE_HIRES, RESOURCE_ID_DREADNOUGHT_HIRES, RESOURCE_ID_JUGGER_HIRES, RESOURCE_ID_INTRUDER_HIRES,
                           RESOURCE_ID_TERMINATOR_HIRES, RESOURCE_ID_STINGER_HIRES};
 
-
 static void update_pilot() {
   time_t temp = time(NULL);
   struct tm *tick_time = localtime(&temp);
