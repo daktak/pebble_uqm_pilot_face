@@ -1,15 +1,67 @@
 {
     "author": "dabar",
-    "dependencies": {},
+    "dependencies": {
+        "@rebble/clay": "^1.0.10"
+    },
     "keywords": [],
     "name": "uqm_pilot_face",
     "pebble": {
         "displayName": "UQM_Pilot_Face",
         "enableMultiJS": true,
-        "messageKeys": ["Hires"],
+        "messageKeys": [
+            "Hires"
+        ],
         "projectType": "native",
         "resources": {
             "media": [
+                {
+                    "file": "images/intruder_hires.png",
+                    "name": "INTRUDER_HIRES",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/intruder.png",
+                    "name": "INTRUDER",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/jugger_hires.png",
+                    "name": "JUGGER_HIRES",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/probe_hires.png",
+                    "name": "PROBE_HIRES",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/probe.png",
+                    "name": "PROBE",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/scout_hires.png",
+                    "name": "SCOUT_HIRES",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/scout.png",
+                    "name": "SCOUT",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/skiff_hires.png",
+                    "name": "SKIFF_HIRES",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
                 {
                     "file": "fonts/FUTRFW.TTF",
                     "name": "FONT_UQM_24",
@@ -17,50 +69,8 @@
                     "type": "font"
                 },
                 {
-                    "file": "images/cruiser.png",
-                    "name": "CRUISER",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/cruiser_hires.png",
-                    "name": "CRUISER_HIRES",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/broodhome.png",
-                    "name": "BROODHOME",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/broodhome_hires.png",
-                    "name": "BROODHOME_HIRES",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/blade.png",
-                    "name": "BLADE",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/blade_hires.png",
-                    "name": "BLADE_HIRES",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/avenger.png",
-                    "name": "AVENGER",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/avenger_hires.png",
-                    "name": "AVENGER_HIRES",
+                    "file": "images/avatar_hires.png",
+                    "name": "AVATAR_HIRES",
                     "targetPlatforms": null,
                     "type": "bitmap"
                 },
@@ -71,8 +81,50 @@
                     "type": "bitmap"
                 },
                 {
-                    "file": "images/avatar_hires.png",
-                    "name": "AVATAR_HIRES",
+                    "file": "images/avenger_hires.png",
+                    "name": "AVENGER_HIRES",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/avenger.png",
+                    "name": "AVENGER",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/blade_hires.png",
+                    "name": "BLADE_HIRES",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/blade.png",
+                    "name": "BLADE",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/broodhome_hires.png",
+                    "name": "BROODHOME_HIRES",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/broodhome.png",
+                    "name": "BROODHOME",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/cruiser_hires.png",
+                    "name": "CRUISER_HIRES",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/cruiser.png",
+                    "name": "CRUISER",
                     "targetPlatforms": null,
                     "type": "bitmap"
                 },
@@ -101,8 +153,21 @@
                     "type": "bitmap"
                 },
                 {
+                    "file": "images/guardian.png",
+                    "name": "GUARDIAN",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
                     "file": "images/eluder_hires.png",
                     "name": "ELUDER_HIRES",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/icon.png",
+                    "menuIcon": true,
+                    "name": "ICON",
                     "targetPlatforms": null,
                     "type": "bitmap"
                 },
@@ -127,37 +192,6 @@
                 {
                     "file": "images/guardian_hires.png",
                     "name": "GUARDIAN_HIRES",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/guardian.png",
-                    "name": "GUARDIAN",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/icon.png",
-                    "menuIcon": true,
-                    "name": "ICON",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/intruder_hires.png",
-                    "name": "INTRUDER_HIRES",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/intruder.png",
-                    "name": "INTRUDER",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/jugger_hires.png",
-                    "name": "JUGGER_HIRES",
                     "targetPlatforms": null,
                     "type": "bitmap"
                 },
@@ -224,36 +258,6 @@
                 {
                     "file": "images/podship.png",
                     "name": "PODSHIP",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/probe_hires.png",
-                    "name": "PROBE_HIRES",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/probe.png",
-                    "name": "PROBE",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/scout_hires.png",
-                    "name": "SCOUT_HIRES",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/scout.png",
-                    "name": "SCOUT",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/skiff_hires.png",
-                    "name": "SKIFF_HIRES",
                     "targetPlatforms": null,
                     "type": "bitmap"
                 },
