@@ -1,3 +1,3 @@
-#include "src/c/settings.h"
-#define SETTINGS_KEY 1
+#pragma once
 
+void update_pilot();
