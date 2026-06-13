@@ -38,11 +38,9 @@ void update_pilot() {
     s_pilot_bitmap = NULL;
   }
   
-  s_pilot_bitmap = gbitmap_create_with_resource(PILOT_RESOURCES[index]);
-  ClaySettings settings = get_settings();            
-  if (settings.hd_gfx) {
-    s_pilot_bitmap = gbitmap_create_with_resource(PILOT_RESOURCES_HIRES[index]);
-  }
+  ClaySettings s = get_settings();
+  const uint32_t *resources = s.hd_gfx ? PILOT_RESOURCES_HIRES : PILOT_RESOURCES;
+  s_pilot_bitmap = gbitmap_create_with_resource(resources[index]);
   bitmap_layer_set_bitmap(s_pilot_layer, s_pilot_bitmap);
 }
 
