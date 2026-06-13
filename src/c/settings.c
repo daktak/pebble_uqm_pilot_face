@@ -2,8 +2,6 @@
 
 #include "settings.h"
 #include "src/c/main.h"
-#include "src/c/races.h"
-#include "src/c/ship.h"
 
 static ClaySettings settings;
 
@@ -43,6 +41,7 @@ void prv_inbox_received_handler(DictionaryIterator *iter, void *context) {
     if (old_hd2x != settings.hd_gfx) {
       GRect bounds = get_bounds();
       Layer *window_layer = get_window_layer();
+      update_pilot();
     }
   }
   prv_save_settings();
