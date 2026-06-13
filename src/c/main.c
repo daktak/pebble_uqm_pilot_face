@@ -1,4 +1,5 @@
 #include <pebble.h>
+#include "src/c/settings.h"
 
 static Window *s_main_window;
 static GBitmap *s_pilot_bitmap = NULL; // Initialized to NULL for safety
@@ -14,6 +15,13 @@ static const uint32_t PILOT_RESOURCES[] = {RESOURCE_ID_ELUDER, RESOURCE_ID_GUARD
                         RESOURCE_ID_NEMESIS, RESOURCE_ID_FURY, RESOURCE_ID_SCOUT, RESOURCE_ID_PROBE, RESOURCE_ID_BLADE, RESOURCE_ID_PENETRATOR,
                         RESOURCE_ID_TORCH, RESOURCE_ID_DRONE, RESOURCE_ID_DREADNOUGHT, RESOURCE_ID_JUGGER, RESOURCE_ID_INTRUDER,
                         RESOURCE_ID_TERMINATOR, RESOURCE_ID_STINGER};
+
+static const uint32_t PILOT_RESOURCES_HIRES[] = {RESOURCE_ID_ELUDER_HD2X, RESOURCE_ID_GUARDIAN_HD2X, RESOURCE_ID_SKIFF_HD2X, RESOURCE_ID_BROODHOME_HD2X, RESOURCE_ID_AVATAR_HD2X, RESOURCE_ID_MAULER_HD2X,
+                          RESOURCE_ID_CRUISER_HD2X, RESOURCE_ID_AVENGER_HD2X, RESOURCE_ID_MARAUDER_HD2X, RESOURCE_ID_TRADER_HD2X, RESOURCE_ID_XFORM_HD2X, RESOURCE_ID_PODSHIP_HD2X,
+                          RESOURCE_ID_NEMESIS_HD2X, RESOURCE_ID_FURY_HD2X, RESOURCE_ID_SCOUT_HD2X, RESOURCE_ID_PROBE_HD2X, RESOURCE_ID_BLADE_HD2X, RESOURCE_ID_PENETRATOR_HD2X,
+                          RESOURCE_ID_TORCH_HD2X, RESOURCE_ID_DRONE_HD2X, RESOURCE_ID_DREADNOUGHT_HD2X, RESOURCE_ID_JUGGER_HD2X, RESOURCE_ID_INTRUDER_HD2X,
+                          RESOURCE_ID_TERMINATOR_HD2X, RESOURCE_ID_STINGER_HD2X, RESOURCE_ID_YWING_HD2X};
+
 
 static void update_pilot() {
   time_t temp = time(NULL);
@@ -31,6 +39,9 @@ static void update_pilot() {
   }
 
   s_pilot_bitmap = gbitmap_create_with_resource(PILOT_RESOURCES[index]);
+  if (settings.hd_gfx) {
+    s_pilot_bitmap = gbitmap_create_with_resource(PILOT_RESOURCES_HIRES[index]);
+  }
   bitmap_layer_set_bitmap(s_pilot_layer, s_pilot_bitmap);
 }
 
