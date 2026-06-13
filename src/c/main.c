@@ -104,6 +104,11 @@ static void main_window_unload(Window *window) {
 }
 
 static void init() {
+  prv_load_settings();
+  // Create main Window element and assign to pointer
+  // Open AppMessage connection
+  app_message_register_inbox_received(prv_inbox_received_handler);
+  app_message_open(128, 128);
   s_main_window = window_create();
   window_set_background_color(s_main_window, GColorBlack);
   window_set_window_handlers(s_main_window, (WindowHandlers) {
