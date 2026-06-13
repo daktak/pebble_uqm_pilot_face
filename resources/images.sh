@@ -81,5 +81,5 @@ for ship in ${SHIPS}; do
   do_convert _hires
   FILE=$(find $BASE_DIR -name $ship-cap-000.png | head -n1)
   if [[ ! -f $FILE ]]; then echo "no $ship"; exit 1; fi
-  do_convert _hires
+  do_convert
 done
