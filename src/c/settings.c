@@ -34,7 +34,6 @@ static void prv_save_settings() {
 
 //inbox
 void prv_inbox_received_handler(DictionaryIterator *iter, void *context) {
-  /*
   Tuple *hd2x_t = dict_find(iter, MESSAGE_KEY_Hires);
   if (hd2x_t) {
     bool old_hd2x = settings.hd_gfx;
@@ -42,6 +41,6 @@ void prv_inbox_received_handler(DictionaryIterator *iter, void *context) {
     if (old_hd2x != settings.hd_gfx) {
       update_pilot();
     }
-  }*/
+  }
   prv_save_settings();
 }

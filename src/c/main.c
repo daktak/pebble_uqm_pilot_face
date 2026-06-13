@@ -23,7 +23,7 @@ static const uint32_t PILOT_RESOURCES_HIRES[] = {RESOURCE_ID_ELUDER_HIRES, RESOU
                           RESOURCE_ID_TORCH_HIRES, RESOURCE_ID_DRONE_HIRES, RESOURCE_ID_DREADNOUGHT_HIRES, RESOURCE_ID_JUGGER_HIRES, RESOURCE_ID_INTRUDER_HIRES,
                           RESOURCE_ID_TERMINATOR_HIRES, RESOURCE_ID_STINGER_HIRES};
 
-static void update_pilot() {
+void update_pilot() {
   time_t temp = time(NULL);
   struct tm *tick_time = localtime(&temp);
   
@@ -37,7 +37,7 @@ static void update_pilot() {
     gbitmap_destroy(s_pilot_bitmap);
     s_pilot_bitmap = NULL;
   }
-
+  
   s_pilot_bitmap = gbitmap_create_with_resource(PILOT_RESOURCES[index]);
   ClaySettings settings = get_settings();            
   if (settings.hd_gfx) {
