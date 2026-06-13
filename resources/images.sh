@@ -43,8 +43,7 @@ split[s0][s1];\
 [s1][p]paletteuse=dither=floyd_steinberg" \
   ${DEST_DIR}/${outfile}~color.png
 
-    rm "${DEST_DIR}/${outfile}~bw.png"
-  if [[ -z ${postfix:-} ]]; then
+  rm "${DEST_DIR}/${outfile}~bw.png"
     convert "${DEST_DIR}/${outfile}~color.png" \
     -colorspace Gray \
     -filter Triangle \
@@ -52,9 +51,6 @@ split[s0][s1];\
     -dither FloydSteinberg \
     -remap pattern:gray50 \
     "${DEST_DIR}/${outfile}~bw.png"
-  else
-    convert -size 1x1 xc:black -type bilevel PNG8:"${DEST_DIR}/${outfile}~bw.png"
-  fi
 
   #p2
   rm ${DEST_DIR}/${outfile}~color~200w.png
@@ -82,5 +78,8 @@ split[s0][s1];\
 for ship in ${SHIPS}; do
   FILE=$(find $HD4X_DIR -name $ship-cap-000.png | head -n1)
   if [[ ! -f $FILE ]]; then echo "no $ship"; exit 1; fi
-  do_convert
+  do_convert _hires
+  FILE=$(find $BASE_DIR -name $ship-cap-000.png | head -n1)
+  if [[ ! -f $FILE ]]; then echo "no $ship"; exit 1; fi
+  do_convert _hires
 done
