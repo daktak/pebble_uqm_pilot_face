@@ -6,7 +6,7 @@
     "pebble": {
         "displayName": "UQM_Pilot_Face",
         "enableMultiJS": true,
-        "messageKeys": [],
+        "messageKeys": ["Hires"],
         "projectType": "native",
         "resources": {
             "media": [
