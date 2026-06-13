@@ -1,5 +1,6 @@
 #include <pebble.h>
 #include "src/c/settings.h"
+#include "src/c/main.h"
 
 static Window *s_main_window;
 static GBitmap *s_pilot_bitmap = NULL; // Initialized to NULL for safety
