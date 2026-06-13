@@ -23,8 +23,20 @@
                     "type": "bitmap"
                 },
                 {
+                    "file": "images/cruiser_hires.png",
+                    "name": "CRUISER_HIRES",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
                     "file": "images/broodhome.png",
                     "name": "BROODHOME",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/broodhome_hires.png",
+                    "name": "BROODHOME_HIRES",
                     "targetPlatforms": null,
                     "type": "bitmap"
                 },
@@ -35,8 +47,20 @@
                     "type": "bitmap"
                 },
                 {
+                    "file": "images/blade_hires.png",
+                    "name": "BLADE_HIRES",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
                     "file": "images/avenger.png",
                     "name": "AVENGER",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/avenger_hires.png",
+                    "name": "AVENGER_HIRES",
                     "targetPlatforms": null,
                     "type": "bitmap"
                 },
@@ -47,8 +71,26 @@
                     "type": "bitmap"
                 },
                 {
+                    "file": "images/avatar_hires.png",
+                    "name": "AVATAR_HIRES",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/dreadnought_hires.png",
+                    "name": "DREADNOUGHT_HIRES",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
                     "file": "images/dreadnought.png",
                     "name": "DREADNOUGHT",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/drone_hires.png",
+                    "name": "DRONE_HIRES",
                     "targetPlatforms": null,
                     "type": "bitmap"
                 },
@@ -59,14 +101,32 @@
                     "type": "bitmap"
                 },
                 {
+                    "file": "images/eluder_hires.png",
+                    "name": "ELUDER_HIRES",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
                     "file": "images/eluder.png",
                     "name": "ELUDER",
                     "targetPlatforms": null,
                     "type": "bitmap"
                 },
                 {
+                    "file": "images/fury_hires.png",
+                    "name": "FURY_HIRES",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
                     "file": "images/fury.png",
                     "name": "FURY",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/guardian_hires.png",
+                    "name": "GUARDIAN_HIRES",
                     "targetPlatforms": null,
                     "type": "bitmap"
                 },
@@ -84,8 +144,20 @@
                     "type": "bitmap"
                 },
                 {
+                    "file": "images/intruder_hires.png",
+                    "name": "INTRUDER_HIRES",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
                     "file": "images/intruder.png",
                     "name": "INTRUDER",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/jugger_hires.png",
+                    "name": "JUGGER_HIRES",
                     "targetPlatforms": null,
                     "type": "bitmap"
                 },
@@ -96,8 +168,20 @@
                     "type": "bitmap"
                 },
                 {
+                    "file": "images/marauder_hires.png",
+                    "name": "MARAUDER_HIRES",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
                     "file": "images/marauder.png",
                     "name": "MARAUDER",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/mauler_hires.png",
+                    "name": "MAULER_HIRES",
                     "targetPlatforms": null,
                     "type": "bitmap"
                 },
@@ -108,8 +192,20 @@
                     "type": "bitmap"
                 },
                 {
+                    "file": "images/nemesis_hires.png",
+                    "name": "NEMESIS_HIRES",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
                     "file": "images/nemesis.png",
                     "name": "NEMESIS",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/penetrator_hires.png",
+                    "name": "PENETRATOR_HIRES",
                     "targetPlatforms": null,
                     "type": "bitmap"
                 },
@@ -120,8 +216,20 @@
                     "type": "bitmap"
                 },
                 {
+                    "file": "images/podship_hires.png",
+                    "name": "PODSHIP_HIRES",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
                     "file": "images/podship.png",
                     "name": "PODSHIP",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/probe_hires.png",
+                    "name": "PROBE_HIRES",
                     "targetPlatforms": null,
                     "type": "bitmap"
                 },
@@ -132,8 +240,20 @@
                     "type": "bitmap"
                 },
                 {
+                    "file": "images/scout_hires.png",
+                    "name": "SCOUT_HIRES",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
                     "file": "images/scout.png",
                     "name": "SCOUT",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/skiff_hires.png",
+                    "name": "SKIFF_HIRES",
                     "targetPlatforms": null,
                     "type": "bitmap"
                 },
@@ -144,8 +264,20 @@
                     "type": "bitmap"
                 },
                 {
+                    "file": "images/stinger_hires.png",
+                    "name": "STINGER_HIRES",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
                     "file": "images/stinger.png",
                     "name": "STINGER",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/terminator_hires.png",
+                    "name": "TERMINATOR_HIRES",
                     "targetPlatforms": null,
                     "type": "bitmap"
                 },
@@ -156,14 +288,44 @@
                     "type": "bitmap"
                 },
                 {
+                    "file": "images/torch_hires.png",
+                    "name": "TORCH_HIRES",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
                     "file": "images/torch.png",
                     "name": "TORCH",
                     "targetPlatforms": null,
                     "type": "bitmap"
                 },
                 {
+                    "file": "images/trader_hires.png",
+                    "name": "TRADER_HIRES",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
                     "file": "images/trader.png",
                     "name": "TRADER",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/turret_hires.png",
+                    "name": "NEMESIS_TURRET_HIRES",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/turret.png",
+                    "name": "NEMESIS_TURRET",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/xform_hires.png",
+                    "name": "XFORM_HIRES",
                     "targetPlatforms": null,
                     "type": "bitmap"
                 },
