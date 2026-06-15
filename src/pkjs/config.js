@@ -109,6 +109,37 @@ module.exports = [
     ],
   },
   {
+    type: "section",
+    items: [
+      {
+        type: "heading",
+        defaultValue: "Quiet Time Settings",
+      },
+      {
+        type: "toggle",
+        messageKey: "PilotQuietTime",
+        label: "Don't change pilot/captain at these times",
+        defaultValue: false,
+      },
+      {
+        type: "slider",
+        messageKey: "PilotQuietStart",
+        defaultValue: 23,
+        label: "Changes stop at (24hr)",
+        min: 0,
+        max: 23,
+      },
+      {
+        type: "slider",
+        messageKey: "PilotQuietStop",
+        defaultValue: 6,
+        label: "Changes resume at (24hr)",
+        min: 0,
+        max: 23,
+      },
+    ],
+  },
+  {
     type: "submit",
     defaultValue: "Save Settings",
   },

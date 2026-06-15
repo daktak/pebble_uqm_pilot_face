@@ -12,7 +12,10 @@
       "Hires",
       "PilotSelect",
       "PilotChange",
-      "CapChange"
+      "CapChange",
+      "PilotQuietTime",
+      "PilotQuietStart",
+      "PilotQuietStop"
     ],
     "projectType": "native",
     "resources": {
