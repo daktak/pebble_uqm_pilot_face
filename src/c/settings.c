@@ -15,6 +15,9 @@ static void prv_default_settings() {
   settings.pilot_select = 0;
   settings.pilot_change = 5;
   settings.cap_change = 5;
+  settings.quiet_time = false;
+  settings.quiet_start = 23;
+  settings.quiet_stop = 6;
 }
 
 void prv_load_settings() {
@@ -57,6 +60,18 @@ void prv_inbox_received_handler(DictionaryIterator *iter, void *context) {
   Tuple *cap_change_t = dict_find(iter, MESSAGE_KEY_CapChange);
   if (cap_change_t) {
     settings.cap_change = atoi(cap_change_t->value->cstring);
+  }
+  Tuple *quiet_time_t = dict_find(iter, MESSAGE_KEY_PilotQuietTime);
+  if (quiet_time_t) {
+    settings.quiet_time = quiet_time_t->value->uint32 == 1;
+  }
+  Tuple *quiet_start_t = dict_find(iter, MESSAGE_KEY_PilotQuietStart);
+  if (quiet_start_t) {
+    settings.quiet_start = quiet_start_t->value->int32;
+  }
+  Tuple *quiet_stop_t = dict_find(iter, MESSAGE_KEY_PilotQuietStop);
+  if (quiet_stop_t) {
+    settings.quiet_stop = quiet_stop_t->value->int32;
   }
   prv_save_settings();
 }

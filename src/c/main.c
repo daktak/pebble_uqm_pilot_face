@@ -91,7 +91,7 @@ void update_pilot() {
 
   s_img_border = GRect(img_x - 2, s_img_y - 2, img_size.w + 4, img_size.h + 4);
 
-  int cap_y = s_img_y + img_size.h + GAP;
+  int cap_y = s_img_y + img_size.h + GAP - 1;
   layer_set_frame(text_layer_get_layer(s_cap_layer), GRect(PAD, cap_y, s_win_w - PAD * 2, CAP_H));
   s_sep_y = cap_y + CAP_H;
   if (s_border_layer) layer_mark_dirty(s_border_layer);
@@ -131,12 +131,24 @@ static void update_time() {
   text_layer_set_text(s_time_layer, s_buffer);
 }
 
+static bool is_quiet_time(struct tm *tick_time, ClaySettings *s) {
+  if (!s->quiet_time) return false;
+  int h = tick_time->tm_hour;
+  if (s->quiet_start < s->quiet_stop) {
+    return h >= s->quiet_start && h < s->quiet_stop;
+  } else {
+    return h >= s->quiet_start || h < s->quiet_stop;
+  }
+}
+
 static void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
   update_time();
 
   if (units_changed & MINUTE_UNIT) {
     ClaySettings s = get_settings();
     int min = tick_time->tm_min;
+
+    if (is_quiet_time(tick_time, &s)) return;
 
     if (s.pilot_select == 0 && s.pilot_change > 0 && min % s.pilot_change == 0) {
       change_pilot();
