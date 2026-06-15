@@ -82,7 +82,7 @@ module.exports = [
         type: "select",
         messageKey: "CapChange",
         label: "Change captain every",
-        defaultValue: "5",
+        defaultValue: "1",
         options: [
           {
             label: "Never",
