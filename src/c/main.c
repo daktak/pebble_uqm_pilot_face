@@ -129,7 +129,7 @@ static void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
     ClaySettings s = get_settings();
     int min = tick_time->tm_min;
 
-    if (s.pilot_change > 0 && min % s.pilot_change == 0) {
+    if (s.pilot_select == 0 && s.pilot_change > 0 && min % s.pilot_change == 0) {
       change_pilot();
     } else if (s.cap_change > 0 && min % s.cap_change == 0) {
       change_captain_only();
@@ -220,7 +220,8 @@ static void main_window_load(Window *window) {
 
   time_t now = time(NULL);
   struct tm *tick_time = localtime(&now);
-  s_current_pilot = tick_time->tm_min % RACE_COUNT;
+  ClaySettings s2 = get_settings();
+  s_current_pilot = (s2.pilot_select > 0) ? (s2.pilot_select - 1) : (tick_time->tm_min % RACE_COUNT);
   update_pilot();
   update_time();
 }
