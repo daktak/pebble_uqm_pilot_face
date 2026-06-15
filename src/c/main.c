@@ -90,6 +90,10 @@ void update_pilot() {
   layer_set_frame(bitmap_layer_get_layer(s_pilot_layer), GRect(img_x, s_img_y, img_size.w, img_size.h));
 
   s_img_border = GRect(img_x - 2, s_img_y - 2, img_size.w + 4, img_size.h + 4);
+
+  int cap_y = s_img_y + img_size.h + GAP;
+  layer_set_frame(text_layer_get_layer(s_cap_layer), GRect(PAD, cap_y, s_win_w - PAD * 2, CAP_H));
+  s_sep_y = cap_y + CAP_H;
   if (s_border_layer) layer_mark_dirty(s_border_layer);
 
   update_race();
@@ -104,7 +108,12 @@ void update_captain_text() {
   text_layer_set_text(s_cap_layer, get_captain(s_current_pilot));
 }
 
-static void change_pilot() {
+void set_pilot(int race) {
+  s_current_pilot = race;
+  update_pilot();
+}
+
+void change_pilot() {
   s_current_pilot = rand() % RACE_COUNT;
   update_pilot();
 }
@@ -176,10 +185,9 @@ static void main_window_load(Window *window) {
   int h = bounds.size.h;
 
   int time_y = h - PAD - TIME_H;
-  int cap_y = time_y - GAP - CAP_H - 2;
   int race_y = PAD - 1;
   s_img_y = race_y + RACE_H + GAP;
-  s_sep_y = cap_y + CAP_H;
+  s_sep_y = 0;
 
 #if defined(TIME_FONT)
   s_custom_font = NULL;
@@ -200,7 +208,7 @@ static void main_window_load(Window *window) {
   text_layer_set_text_alignment(s_race_layer, GTextAlignmentCenter);
   layer_add_child(window_layer, text_layer_get_layer(s_race_layer));
 
-  s_cap_layer = text_layer_create(GRect(PAD, cap_y, s_win_w - PAD * 2, CAP_H));
+  s_cap_layer = text_layer_create(GRect(PAD, s_img_y, s_win_w - PAD * 2, CAP_H));
   text_layer_set_background_color(s_cap_layer, GColorClear);
   text_layer_set_text_color(s_cap_layer, GColorWhite);
   text_layer_set_font(s_cap_layer, fonts_get_system_font(CAP_FONT));
