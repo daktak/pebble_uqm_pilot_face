@@ -30,10 +30,4 @@ typedef enum {
   ZOQFOTPIK,
 } RaceID;
 
-static const char *RACE_NAMES[RACE_COUNT] = {
-  "Spathi", "Androsynth", "Arilou", "Chenjesu", "Chmmr",
-  "Druuge", "Human", "Ilwrath", "Kohr-Ah", "Melnorme",
-  "Mmrnmhrm", "Mycon", "Orz", "Pkunk", "Shofixti",
-  "Slylandro", "Supox", "Syreen", "Thraddash", "Umgah",
-  "Ur-Quan", "Utwig", "Vux", "Yehat", "Zoq-Fot-Pik",
-};
+

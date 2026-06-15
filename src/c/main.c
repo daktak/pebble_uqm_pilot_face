@@ -17,6 +17,14 @@ static int s_current_pilot;
 static GRect s_race_rect;
 static GRect s_cap_rect;
 
+static const char *RACE_NAMES[RACE_COUNT] = {
+  "Spathi", "Androsynth", "Arilou", "Chenjesu", "Chmmr",
+  "Druuge", "Human", "Ilwrath", "Kohr-Ah", "Melnorme",
+  "Mmrnmhrm", "Mycon", "Orz", "Pkunk", "Shofixti",
+  "Slylandro", "Supox", "Syreen", "Thraddash", "Umgah",
+  "Ur-Quan", "Utwig", "Vux", "Yehat", "Zoq-Fot-Pik",
+};
+
 static const uint32_t PILOT_RESOURCES[] = {RESOURCE_ID_ELUDER, RESOURCE_ID_GUARDIAN, RESOURCE_ID_SKIFF, RESOURCE_ID_BROODHOME, RESOURCE_ID_AVATAR, RESOURCE_ID_MAULER,
                         RESOURCE_ID_CRUISER, RESOURCE_ID_AVENGER, RESOURCE_ID_MARAUDER, RESOURCE_ID_TRADER, RESOURCE_ID_XFORM, RESOURCE_ID_PODSHIP,
                         RESOURCE_ID_NEMESIS, RESOURCE_ID_FURY, RESOURCE_ID_SCOUT, RESOURCE_ID_PROBE, RESOURCE_ID_BLADE, RESOURCE_ID_PENETRATOR,
