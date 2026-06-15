@@ -43,7 +43,11 @@ void prv_inbox_received_handler(DictionaryIterator *iter, void *context) {
     if (val > RACE_COUNT) val = RACE_COUNT;
     settings.pilot_select = val;
     if (old != settings.pilot_select) {
-      update_pilot();
+      if (val > 0) {
+        set_pilot(val - 1);
+      } else {
+        change_pilot();
+      }
     }
   }
   Tuple *pilot_change_t = dict_find(iter, MESSAGE_KEY_PilotChange);
