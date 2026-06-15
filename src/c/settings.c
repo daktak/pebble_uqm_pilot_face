@@ -1,6 +1,7 @@
 #include <pebble.h>
 
 #include "settings.h"
+#include "src/c/races.h"
 #include "src/c/main.h"
 
 static ClaySettings settings;
@@ -37,7 +38,10 @@ void prv_inbox_received_handler(DictionaryIterator *iter, void *context) {
   Tuple *pilot_select_t = dict_find(iter, MESSAGE_KEY_PilotSelect);
   if (pilot_select_t) {
     int old = settings.pilot_select;
-    settings.pilot_select = atoi(pilot_select_t->value->cstring);
+    int val = atoi(pilot_select_t->value->cstring);
+    if (val < 0) val = 0;
+    if (val > RACE_COUNT) val = RACE_COUNT;
+    settings.pilot_select = val;
     if (old != settings.pilot_select) {
       update_pilot();
     }

@@ -189,7 +189,7 @@ static void main_window_load(Window *window) {
   s_time_font = s_custom_font;
 #endif
 
-  s_pilot_layer = bitmap_layer_create(GRect(0, s_img_y, s_win_w, 100));
+  s_pilot_layer = bitmap_layer_create(GRect(0, s_img_y, s_win_w, 0));
   bitmap_layer_set_compositing_mode(s_pilot_layer, GCompOpSet);
   layer_add_child(window_layer, bitmap_layer_get_layer(s_pilot_layer));
 
@@ -221,7 +221,9 @@ static void main_window_load(Window *window) {
   time_t now = time(NULL);
   struct tm *tick_time = localtime(&now);
   ClaySettings s2 = get_settings();
-  s_current_pilot = (s2.pilot_select > 0) ? (s2.pilot_select - 1) : (tick_time->tm_min % RACE_COUNT);
+  int ps = s2.pilot_select;
+  if (ps < 0 || ps > RACE_COUNT) ps = 0;
+  s_current_pilot = (ps > 0) ? (ps - 1) : (tick_time->tm_min % RACE_COUNT);
   update_pilot();
   update_time();
 }
