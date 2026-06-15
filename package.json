@@ -10,6 +10,7 @@
     "enableMultiJS": true,
     "messageKeys": [
       "Hires",
+      "PilotSelect",
       "PilotChange",
       "CapChange"
     ],

@@ -5,6 +5,7 @@
 
 typedef struct ClaySettings {
   bool hd_gfx;
+  int pilot_select;
   int pilot_change;
   int cap_change;
 } ClaySettings;

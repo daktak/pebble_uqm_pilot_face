@@ -11,6 +11,7 @@ ClaySettings get_settings() {
 
 static void prv_default_settings() {
   settings.hd_gfx = true;
+  settings.pilot_select = 0;
   settings.pilot_change = 5;
   settings.cap_change = 5;
 }
@@ -30,6 +31,14 @@ void prv_inbox_received_handler(DictionaryIterator *iter, void *context) {
     bool old_hd2x = settings.hd_gfx;
     settings.hd_gfx = hd2x_t->value->uint32==1;
     if (old_hd2x != settings.hd_gfx) {
+      update_pilot();
+    }
+  }
+  Tuple *pilot_select_t = dict_find(iter, MESSAGE_KEY_PilotSelect);
+  if (pilot_select_t) {
+    int old = settings.pilot_select;
+    settings.pilot_select = atoi(pilot_select_t->value->cstring);
+    if (old != settings.pilot_select) {
       update_pilot();
     }
   }
