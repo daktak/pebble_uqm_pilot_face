@@ -12,10 +12,12 @@ static TextLayer *s_race_layer;
 static TextLayer *s_cap_layer;
 static Layer *s_border_layer;
 static GFont s_custom_font;
+static GFont s_time_font;
 
 static int s_current_pilot;
 static int s_win_w;
 static int s_img_y;
+static int s_sep_y;
 static GRect s_img_border;
 
 static const char *RACE_NAMES[RACE_COUNT] = {
@@ -41,27 +43,32 @@ static const uint32_t PILOT_RESOURCES_HIRES[] = {RESOURCE_ID_ELUDER_HIRES, RESOU
 #if defined(PBL_PLATFORM_GABBRO)
 #define RACE_FONT FONT_KEY_GOTHIC_24
 #define CAP_FONT FONT_KEY_GOTHIC_28
-#define RACE_H 26
+#define TIME_FONT FONT_KEY_GOTHIC_28
+#define RACE_H 28
 #define CAP_H 30
+#define TIME_H 36
 #elif defined(PBL_PLATFORM_EMERY)
 #define RACE_FONT FONT_KEY_GOTHIC_18
 #define CAP_FONT FONT_KEY_GOTHIC_24
-#define RACE_H 20
+#define TIME_FONT FONT_KEY_GOTHIC_28
+#define RACE_H 22
 #define CAP_H 26
+#define TIME_H 40
 #elif defined(PBL_PLATFORM_CHALK)
 #define RACE_FONT FONT_KEY_GOTHIC_14
 #define CAP_FONT FONT_KEY_GOTHIC_18
-#define RACE_H 16
+#define RACE_H 18
 #define CAP_H 20
+#define TIME_H 36
 #else
 #define RACE_FONT FONT_KEY_GOTHIC_14
 #define CAP_FONT FONT_KEY_GOTHIC_18
-#define RACE_H 16
+#define RACE_H 18
 #define CAP_H 20
-#endif
-#define GAP 4
-#define PAD 4
 #define TIME_H 36
+#endif
+#define GAP 2
+#define PAD 4
 
 int get_current_pilot() {
   return s_current_pilot;
@@ -147,6 +154,10 @@ static void border_update_proc(Layer *layer, GContext *ctx) {
   if (s_img_border.size.w > 0 && s_img_border.size.h > 0) {
     draw_bezel(ctx, s_img_border);
   }
+  graphics_context_set_stroke_color(ctx, GColorWhite);
+  graphics_draw_line(ctx, GPoint(PAD, s_sep_y), GPoint(s_win_w - PAD, s_sep_y));
+  graphics_context_set_stroke_color(ctx, GColorDarkGray);
+  graphics_draw_line(ctx, GPoint(PAD, s_sep_y + 1), GPoint(s_win_w - PAD, s_sep_y + 1));
 #else
   graphics_context_set_stroke_width(ctx, 1);
   graphics_context_set_stroke_color(ctx, GColorWhite);
@@ -154,6 +165,7 @@ static void border_update_proc(Layer *layer, GContext *ctx) {
   if (s_img_border.size.w > 0 && s_img_border.size.h > 0) {
     graphics_draw_rect(ctx, s_img_border);
   }
+  graphics_draw_line(ctx, GPoint(PAD, s_sep_y), GPoint(s_win_w - PAD, s_sep_y));
 #endif
 }
 
@@ -167,8 +179,15 @@ static void main_window_load(Window *window) {
   int cap_y = time_y - GAP - CAP_H;
   int race_y = PAD;
   s_img_y = race_y + RACE_H + GAP;
+  s_sep_y = cap_y + CAP_H;
 
+#if defined(TIME_FONT)
+  s_custom_font = NULL;
+  s_time_font = fonts_get_system_font(TIME_FONT);
+#else
   s_custom_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_UQM_24));
+  s_time_font = s_custom_font;
+#endif
 
   s_pilot_layer = bitmap_layer_create(GRect(0, s_img_y, s_win_w, 100));
   bitmap_layer_set_compositing_mode(s_pilot_layer, GCompOpSet);
@@ -191,7 +210,7 @@ static void main_window_load(Window *window) {
   s_time_layer = text_layer_create(GRect(PAD, time_y, s_win_w - PAD * 2, TIME_H));
   text_layer_set_background_color(s_time_layer, GColorClear);
   text_layer_set_text_color(s_time_layer, GColorWhite);
-  text_layer_set_font(s_time_layer, s_custom_font);
+  text_layer_set_font(s_time_layer, s_time_font);
   text_layer_set_text_alignment(s_time_layer, GTextAlignmentCenter);
   layer_add_child(window_layer, text_layer_get_layer(s_time_layer));
 
@@ -215,7 +234,9 @@ static void main_window_unload(Window *window) {
   text_layer_destroy(s_race_layer);
   text_layer_destroy(s_cap_layer);
   layer_destroy(s_border_layer);
-  fonts_unload_custom_font(s_custom_font);
+  if (s_custom_font) {
+    fonts_unload_custom_font(s_custom_font);
+  }
 }
 
 static void init() {
