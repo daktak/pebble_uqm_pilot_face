@@ -21,11 +21,11 @@ static int s_sep_y;
 static GRect s_img_border;
 
 static const char *RACE_NAMES[RACE_COUNT] = {
-  "Spathi", "Androsynth", "Arilou", "Chenjesu", "Chmmr",
-  "Druuge", "Human", "Ilwrath", "Kohr-Ah", "Melnorme",
-  "Mmrnmhrm", "Mycon", "Orz", "Pkunk", "Shofixti",
-  "Slylandro", "Supox", "Syreen", "Thraddash", "Umgah",
-  "Ur-Quan", "Utwig", "Vux", "Yehat", "Zoq-Fot-Pik",
+  "SPATHI", "ANDROSYNTH", "ARILOU", "CHENJESU", "CHMMR",
+  "DRUUGE", "HUMAN", "ILWRATH", "KOHR-AH", "MELNORME",
+  "MMRNMHRM", "MYCON", "ORZ", "PKUNK", "SHOFIXTI",
+  "SLYLANDRO", "SUPOX", "SYREEN", "THRADDASH", "UMGAH",
+  "UR-QUAN", "UTWIG", "VUX", "YEHAT", "ZOQ-FOT-PIK",
 };
 
 static const uint32_t PILOT_RESOURCES[] = {RESOURCE_ID_ELUDER, RESOURCE_ID_GUARDIAN, RESOURCE_ID_SKIFF, RESOURCE_ID_BROODHOME, RESOURCE_ID_AVATAR, RESOURCE_ID_MAULER,
@@ -176,8 +176,8 @@ static void main_window_load(Window *window) {
   int h = bounds.size.h;
 
   int time_y = h - PAD - TIME_H;
-  int cap_y = time_y - GAP - CAP_H;
-  int race_y = PAD;
+  int cap_y = time_y - GAP - CAP_H - 2;
+  int race_y = PAD - 1;
   s_img_y = race_y + RACE_H + GAP;
   s_sep_y = cap_y + CAP_H;
 
