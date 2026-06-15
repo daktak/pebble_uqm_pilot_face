@@ -45,26 +45,26 @@ static const uint32_t PILOT_RESOURCES_HIRES[] = {RESOURCE_ID_ELUDER_HIRES, RESOU
 #define CAP_FONT FONT_KEY_GOTHIC_28
 #define TIME_FONT FONT_KEY_GOTHIC_28
 #define RACE_H 28
-#define CAP_H 30
+#define CAP_H 34
 #define TIME_H 36
 #elif defined(PBL_PLATFORM_EMERY)
 #define RACE_FONT FONT_KEY_GOTHIC_18
 #define CAP_FONT FONT_KEY_GOTHIC_24
 #define TIME_FONT FONT_KEY_GOTHIC_28
 #define RACE_H 22
-#define CAP_H 26
+#define CAP_H 30
 #define TIME_H 40
 #elif defined(PBL_PLATFORM_CHALK)
 #define RACE_FONT FONT_KEY_GOTHIC_14
 #define CAP_FONT FONT_KEY_GOTHIC_18
 #define RACE_H 18
-#define CAP_H 20
+#define CAP_H 22
 #define TIME_H 36
 #else
 #define RACE_FONT FONT_KEY_GOTHIC_14
 #define CAP_FONT FONT_KEY_GOTHIC_18
 #define RACE_H 18
-#define CAP_H 20
+#define CAP_H 22
 #define TIME_H 36
 #endif
 #define GAP 2
