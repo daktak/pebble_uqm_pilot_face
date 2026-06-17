@@ -1,4 +1,4 @@
-# pebble_uqm_watchface
+# pebble_uqm_pilot_face
 
 Based off [Ur-Quan Masters](http://sc2.sourceforge.net/downloads.php)
 
