@@ -10,3 +10,4 @@ Based off [Ur-Quan Masters](http://sc2.sourceforge.net/downloads.php)
 
 ![](screenshots/emery-HD.gif?raw=true)
 ![](screenshots/emery-normal.gif?raw=true)
+
