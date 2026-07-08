@@ -1,199 +1,352 @@
 {
-    "author": "dabar",
-    "dependencies": {},
-    "keywords": [],
-    "name": "uqm_pilot_face",
-    "pebble": {
-        "displayName": "UQM_Pilot_Face",
-        "enableMultiJS": true,
-        "messageKeys": [],
-        "projectType": "native",
-        "resources": {
-            "media": [
-                {
-                    "file": "images/trader-cap-000_144.png",
-                    "name": "TRADER_000_144",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/stinger-cap-000_144.png",
-                    "name": "STINGER_000_144",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/oldscout-cap-000_144.png",
-                    "name": "OLDSCOUT_000_144",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/dreadnought-cap-000_144.png",
-                    "name": "DREADNAUGHT_000_144",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/cruiser-cap-000_144.png",
-                    "name": "CRUISER_000_144",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/probe-cap-000_144.png",
-                    "name": "PROBE_000_144",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "fonts/FUTRFW.TTF",
-                    "name": "FONT_UQM_24",
-                    "targetPlatforms": null,
-                    "type": "font"
-                },
-                {
-                    "file": "images/avenger-cap-000_144.png",
-                    "name": "AVENGER_000_144",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/xform-cap-000.png",
-                    "name": "XFORM_000_144",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/eluder-cap-000_144.png",
-                    "name": "ELUDER_000_144",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/guardian-cap-000.png",
-                    "name": "GUARDIAN_000_144",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/skiff-cap-000_144.png",
-                    "name": "SKIFF_000_144",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/podship-cap-000_144.png",
-                    "name": "PODSHIP_CAP_144",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/blade-cap-000_144.png",
-                    "name": "BLADE_000_144",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/jugger-cap-000_144.png",
-                    "name": "JUGGER_000_144",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/avatar-cap-000_144.png",
-                    "name": "AVATAR_000_144",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/nemesis-cap-000_144.png",
-                    "name": "NEMESIS_000_144",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/penetrator-cap-000_144.png",
-                    "name": "PENETRATOR_000_144",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/fury-cap-000_144.png",
-                    "name": "FURY_000_144",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/torch-cap-000_144.png",
-                    "name": "TORCH_000_144",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/intruder-cap-000_144.png",
-                    "name": "INTRUDER_000_144",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/broodhome-cap-000_144.png",
-                    "name": "BROODHOME_000_144",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/flagship-cap-000_144.png",
-                    "name": "FLAGSHIP_000_144",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/mauler-cap-000_144.png",
-                    "name": "MAULER_000_144",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/marauder-cap-000_144.png",
-                    "name": "MARAUDER_000_144",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/samatra-cap-000.png",
-                    "name": "SAMATRA_000_144",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/drone-cap-000_144.png",
-                    "name": "DRONE_000_144",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/terminator-cap-000_144.png",
-                    "name": "TERMINIATOR_000_144",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                }
-            ]
+  "author": "dabar",
+  "dependencies": {
+    "@rebble/clay": "^1.0.10"
+  },
+  "keywords": [],
+  "name": "uqm_pilot_face",
+  "pebble": {
+    "displayName": "UQM_Pilot_Face",
+    "enableMultiJS": true,
+    "messageKeys": [
+      "Hires",
+      "PilotSelect",
+      "PilotChange",
+      "CapChange",
+      "PilotQuietTime",
+      "PilotQuietStart",
+      "PilotQuietStop"
+    ],
+    "projectType": "native",
+    "resources": {
+      "media": [
+        {
+          "file": "images/intruder_hires.png",
+          "name": "INTRUDER_HIRES",
+          "targetPlatforms": null,
+          "type": "bitmap"
         },
-        "sdkVersion": "3",
-        "targetPlatforms": [
-            "aplite",
-            "basalt",
-            "chalk",
-            "diorite",
-            "emery",
-            "gabbro",
-            "flint"
-        ],
-        "uuid": "002af64a-fce9-4fed-ba9a-e2bbd66063e5",
-        "watchapp": {
-            "watchface": true
+        {
+          "file": "images/intruder.png",
+          "name": "INTRUDER",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/jugger_hires.png",
+          "name": "JUGGER_HIRES",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/probe_hires.png",
+          "name": "PROBE_HIRES",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/probe.png",
+          "name": "PROBE",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/scout_hires.png",
+          "name": "SCOUT_HIRES",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/scout.png",
+          "name": "SCOUT",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/skiff_hires.png",
+          "name": "SKIFF_HIRES",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "fonts/FUTRFW.TTF",
+          "name": "FONT_UQM_24",
+          "targetPlatforms": null,
+          "type": "font"
+        },
+        {
+          "file": "images/avatar_hires.png",
+          "name": "AVATAR_HIRES",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/avatar.png",
+          "name": "AVATAR",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/avenger_hires.png",
+          "name": "AVENGER_HIRES",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/avenger.png",
+          "name": "AVENGER",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/blade_hires.png",
+          "name": "BLADE_HIRES",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/blade.png",
+          "name": "BLADE",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/broodhome_hires.png",
+          "name": "BROODHOME_HIRES",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/broodhome.png",
+          "name": "BROODHOME",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/cruiser_hires.png",
+          "name": "CRUISER_HIRES",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/cruiser.png",
+          "name": "CRUISER",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/dreadnought_hires.png",
+          "name": "DREADNOUGHT_HIRES",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/dreadnought.png",
+          "name": "DREADNOUGHT",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/drone_hires.png",
+          "name": "DRONE_HIRES",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/drone.png",
+          "name": "DRONE",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/guardian.png",
+          "name": "GUARDIAN",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/eluder_hires.png",
+          "name": "ELUDER_HIRES",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/icon.png",
+          "menuIcon": true,
+          "name": "ICON",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/eluder.png",
+          "name": "ELUDER",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/fury_hires.png",
+          "name": "FURY_HIRES",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/fury.png",
+          "name": "FURY",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/guardian_hires.png",
+          "name": "GUARDIAN_HIRES",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/jugger.png",
+          "name": "JUGGER",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/marauder_hires.png",
+          "name": "MARAUDER_HIRES",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/marauder.png",
+          "name": "MARAUDER",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/mauler_hires.png",
+          "name": "MAULER_HIRES",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/mauler.png",
+          "name": "MAULER",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/nemesis_hires.png",
+          "name": "NEMESIS_HIRES",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/nemesis.png",
+          "name": "NEMESIS",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/penetrator_hires.png",
+          "name": "PENETRATOR_HIRES",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/penetrator.png",
+          "name": "PENETRATOR",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/podship_hires.png",
+          "name": "PODSHIP_HIRES",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/podship.png",
+          "name": "PODSHIP",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/skiff.png",
+          "name": "SKIFF",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/stinger_hires.png",
+          "name": "STINGER_HIRES",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/stinger.png",
+          "name": "STINGER",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/terminator_hires.png",
+          "name": "TERMINATOR_HIRES",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/terminator.png",
+          "name": "TERMINATOR",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/torch_hires.png",
+          "name": "TORCH_HIRES",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/torch.png",
+          "name": "TORCH",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/trader_hires.png",
+          "name": "TRADER_HIRES",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/trader.png",
+          "name": "TRADER",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/xform_hires.png",
+          "name": "XFORM_HIRES",
+          "targetPlatforms": null,
+          "type": "bitmap"
+        },
+        {
+          "file": "images/xform.png",
+          "name": "XFORM",
+          "targetPlatforms": null,
+          "type": "bitmap"
         }
+      ]
     },
-    "version": "1.0.0"
+    "sdkVersion": "3",
+    "targetPlatforms": [
+      "aplite",
+      "basalt",
+      "diorite",
+      "emery",
+      "flint"
+    ],
+    "uuid": "002af64a-fce9-4fed-ba9a-e2bbd66063e5",
+    "watchapp": {
+      "watchface": true
+    }
+  },
+  "version": "1.1.0"
 }
